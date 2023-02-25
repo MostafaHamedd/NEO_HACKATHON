@@ -4,7 +4,8 @@ import CourseRow from "../components/CourseRow.component";
 export default function CourseListPage() {
   return (
     <div>
-      Term: Summer2023
+      <div className="display-6 courseName"> Term: Summer2023</div>
+
       <CourseRow
         courseName="COMP 1010"
         courseFullName="INTRODUCTORY COMPUTER SCIENCE I"
