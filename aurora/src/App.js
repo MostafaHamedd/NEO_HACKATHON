@@ -5,12 +5,13 @@ import React from 'react'
 import { URL_ROUTES } from "./jsx/URL_ROUTES.routes"
 import SchedulePage from "./jsx/pages/Schedule.page"
 import CourseListPage from "./jsx/pages/CourseList.page"
+import RegistrationPage from "./jsx/pages/registration/registration.page"
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
+        <Header />
         <Routes>
           <Route exact path={URL_ROUTES.HOME_PAGE} element={<MainPage />} />
           <Route
@@ -22,6 +23,11 @@ function App() {
             exact
             path={URL_ROUTES.COURSES_PAGE}
             element={<CourseListPage />}
+          />
+          <Route
+            exact
+            path={URL_ROUTES.REGISTRATION_PAGE}
+            element={<RegistrationPage />}
           />
         </Routes>
       </Router>

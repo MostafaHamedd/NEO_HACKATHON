@@ -1,65 +1,115 @@
-class course {
-  constructor(name, numOfSections) {
-    this.name = name;
-    this.numOfSections = numOfSections;
-  }
-  toString() {
-  return "Course: " + this.name + " " + this.numOfSections;
-  }
-  getName() {
-    return this.name
-  }
-  getNumOfSection() {
-  }
- 
-  // This function has a parameter to change the course name
-  changeName(newCourseName) { 
-    this.name = newCourseName;
+const COMPSCI = new DEPARTMENT_COURSES();
+
+let subject = "COMP"
+let department = "COMPUTER SCIENCE"
+COMPSCI.addCourse(
+  new Course(
+    subject,
+    '1010',
+    '	Introductory Computer Science 1',
+    3,
+    'A01',
+    3126781,
+    'MWF',
+    '2:30AM - 3:30PM',
+    200,
+    190,
+    'Jack Ma',
+    '221 Wallace',
+    department 
+  )
+)
+
+
+
+class Course {
+  constructor(
+    subject,
+    courseCode,
+    title,
+    credits,
+    sectionNum,
+    CRN,
+    days,
+    time,
+    capacity,
+    active,
+    instructor,
+    location,
+    department
+  ) {
+    this.subject = subject
+    this.courseCode = courseCode
+    this.title = title
+    this.credits = credits
+    this.sectionNum = sectionNum
+    this.CRN = CRN
+    this.days = days
+    this.time = time
+    this.capacity = capacity
+    this.active = active
+    this.instructor = instructor
+    this.location = location
+    this.department = department
   }
 
-  // This function has a parameter to modify the course number
-  changeCourseNum(newCourseNumber) {
-    this.numOfSections = newCourseNumber
+  getSubject() {
+    return this.subject
+  }
+  getCourseCode() {
+    return this.courseCode
+  }
+  getTitle() {
+    return this.title
+  }
+  getCredits() {
+    return this.credits
+  }
+  getSectionNum() {
+    return this.sectionNum
+  }
+  getCRN() {
+    return this.subject
+  }
+  getDays() {
+    return this.days
+  }
+  getTime() {
+    return this.time
+  }
+  getCapacity() {
+    return this.capacity
+  }
+  getActive() {
+    return this.active
+  }
+  getInstructor() {
+    return this.instructor
+  }
+  getLocation() {
+    return this.location
+  }
+  getDepartment() {
+    return this.department
   }
 }
 
-const NAMES_TERMS = {
-  "Summer 2023": "Summer 2023",
-  "Winter 2023": "Winter 2023",
-  "Fall 2023": "Fall 2023",
-};
+class DEPARTMENT_COURSES {
+  constructor() {
+    this.COURSES = []
+  }
 
-const NAMES_COURSES = {
-  "COMP 1012": "COMP 1012",
-};
-
-const COURSES = [
-  TERM_NAMES["Summer 2023"],
-  TERM_NAMES["Winter 2023"],
-  TERM_NAMES["Fall 2023"],
-];
-
-const COURSES_INFO = {};
-
-function hasDuplicates(list) {
-  return new Set(list).size !== list.length;
+  addCourse(newCourse) {
+    this.COURSES.push(newCourse)
+  }
 }
 
-class terms {
-  constructor(courses, examDates){
-    this.courses = courses;
-    this.examDates = examDates;
-    this.coursesList = [];
-    this.courseCount = 0;
+class TERM {
+  constructor() {
+    this.DEPARTMENT = []
   }
-  
-  addCourses (course) {
-    if (this.courseCount > 5 && hasDuplicates(this.coursesList)) {
-      console.log("Error you may not have more than 5 courses.");
-    } else {
-      this.coursesList.push(course);
-      this.courseCount ++;
-    }
 
+  addDepartment(department) {
+    this.DEPARTMENT.push(department)
   }
 }
