@@ -23,47 +23,39 @@ export default function Header() {
         <div className="collapse navbar-collapse" id="navbarColor03">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active ms-5" href={URL_ROUTES.HOME_PAGE}>
-                Home
-                <ion-icon name="home-outline"></ion-icon>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href={URL_ROUTES.SCHEDULE_PAGE}>
-                Schedule
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href={URL_ROUTES.COURSES_PAGE}>
-                Courses
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
+              <Link
+                className="d-flex-inline flex-center nav-link rounded-pill active"
+                to={URL_ROUTES.HOME_PAGE}
               >
-                Dropdown
-              </a>
-              <div className="dropdown-menu">
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
-                <a className="dropdown-item" href="#">
-                  Another action
-                </a>
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">
-                  Separated link
-                </a>
-              </div>
+                Home <ion-icon name="home-outline"></ion-icon>
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                className="d-flex-inline flex-center nav-link rounded-pill active"
+                to={URL_ROUTES.SCHEDULE_PAGE}
+              >
+                Schedule <ion-icon name="school-outline"></ion-icon>
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                className="d-flex-inline flex-center nav-link rounded-pill active"
+                to={URL_ROUTES.REGISTRATION_PAGE}
+              >
+                Register <ion-icon name="book-outline"></ion-icon>
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                className="d-flex-inline flex-center nav-link rounded-pill active"
+                to={URL_ROUTES.COURSES_PAGE}
+              >
+                 <ion-icon name="book-outline"></ion-icon>
+              </Link>
             </li>
           </ul>
         </div>
