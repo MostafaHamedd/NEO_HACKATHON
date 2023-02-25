@@ -4,12 +4,18 @@ const NAMES_TERMS = {
   "Fall 2023": "Fall 2023",
 };
 
-const courses = [
+const NAMES_COURSES = {
+  "COMP 1012": "COMP 1012",
+}
+
+const COURSES = [
   TERM_NAMES["Summer 2023"],
   TERM_NAMES["Winter 2023"],
   TERM_NAMES["Fall 2023"],
 ];
 
-const NAMES_COURSES = {
-  "COMP 1012": "COMP 1012",
-};
+const COURSES_INFO = {};
+
+COURSES_INFO[ NAMES_COURSES["COMP 1012"] ] = {
+  
+}
