@@ -11,7 +11,7 @@ export default function Header() {
     <div className="collapse navbar-collapse" id="navbarColor03">
       <ul className="navbar-nav ms-auto">
         <li className="nav-item">
-          <a className="nav-link active" href="#">Home
+          <a className="nav-link active ms-5" href="#">Home
             <span className="visually-hidden">(current)</span>
           </a>
         </li>
@@ -37,7 +37,7 @@ export default function Header() {
       </ul>
     </div>
   </div>
-</nav>
+    </nav>
   );
 }
 
