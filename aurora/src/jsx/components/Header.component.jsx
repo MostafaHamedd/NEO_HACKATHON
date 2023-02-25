@@ -4,6 +4,7 @@ export default function Header() {
   return (
     <div>
       <ion-icon name="alert-circle-outline"></ion-icon>
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
     </div>
-  )
+  );
 }
