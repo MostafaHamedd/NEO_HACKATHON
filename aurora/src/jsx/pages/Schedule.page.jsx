@@ -32,10 +32,11 @@ export default function MyScheduler() {
   return (
     <Paper>
       <div>Week at Glance</div>
-      <div>
-        <button onClick={handlePrevClick}>Previous Week</button>
-        <button onClick={handleNextClick}>Next Week</button>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <button onClick={handlePrevClick}>Previous Week</button>
+      <button onClick={handleNextClick}>Next Week</button>
       </div>
+
       <Scheduler data={schedulerData}>
         <ViewState currentDate={currentDate} />
         <WeekView startDayHour={7} endDayHour={23} />
