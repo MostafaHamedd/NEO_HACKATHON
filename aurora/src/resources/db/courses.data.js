@@ -1,26 +1,38 @@
-class course {
-  constructor(name, numOfSections) {
-    this.name = name;
-    this.numOfSections = numOfSections;
-  }
-  toString() {
-  return "Course: " + this.name + " " + this.numOfSections;
-  }
-  getName() {
-    return this.name
-  }
-  getNumOfSection() {
-  }
- 
-  // This function has a parameter to change the course name
-  changeName(newCourseName) { 
-    this.name = newCourseName;
+class Course {
+  constructor(
+    subject,
+    courseCode,
+    title,
+    credits,
+    sectionNum,
+    CRN,
+    days,
+    time,
+    capacity,
+    active,
+    instructor,
+    date,
+    location,
+    department
+  ) {
+    this.subject = subject
+    this.courseCode = courseCode
+    this.title = title
+    this.credits = credits
+    this.sectionNum = sectionNum
+    this.CRN = CRN
+    this.days = days
+    this.time = time
+    this.capacity = capacity
+    this.active = active
+    this.instructor = instructor
+    this.date = date
+    this.location = location
+    this.department = department
   }
 
-  // This function has a parameter to modify the course number
-  changeCourseNum(newCourseNumber) {
-    this.numOfSections = newCourseNumber
-  }
+  getSubject() { return this.subject }
+  getSubject() { return this.subject }
 }
 
 const NAMES_TERMS = {
@@ -40,10 +52,6 @@ const COURSES = [
 ];
 
 const COURSES_INFO = {};
-
-function hasDuplicates(list) {
-  return new Set(list).size !== list.length;
-}
 
 class terms {
   constructor(courses, examDates){
