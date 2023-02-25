@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import CourseRow from "../components/CourseRow.component";
 
 export default function CourseListPage() {
   return (
-    <div>CourseListPage</div>
-  )
+    <div>
+      Term: Summer2023
+      <CourseRow />
+    </div>
+  );
 }
