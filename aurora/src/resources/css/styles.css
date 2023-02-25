@@ -40,3 +40,8 @@ ion-icon {
   background-color: lightgray;
   margin-top: 20px;
 }
+
+.sectionsRow {
+  margin-top: 15px;
+  background-color: lightgoldenrodyellow;
+}
