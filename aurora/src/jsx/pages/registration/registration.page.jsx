@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function RegistrationPage() {
-  return (
-    <div>registration.page</div>
-  )
+  return <div>registration.page</div>;
 }

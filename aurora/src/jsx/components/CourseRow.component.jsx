@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { URL_ROUTES } from "../URL_ROUTES.routes";
 
 export default class CourseRow extends Component {
   render() {
@@ -8,9 +10,11 @@ export default class CourseRow extends Component {
         <div className="col">{courseName}</div>
         <div className="col">{courseFullName}</div>
         <div className="col">3.00CR</div>
-        <button type="button " class="col btn btn-primary ">
-          View Sections
-        </button>
+        <Link className="col d-flex" to={URL_ROUTES.SECTIONS_PAGE}>
+          <button type="button" className="btn btn-primary ml-auto">
+            View Sections
+          </button>
+        </Link>
       </div>
     );
   }
