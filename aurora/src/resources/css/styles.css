@@ -1,36 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 :root {
-    --color-success: #2fb380;
+  --color-success: #2fb380;
 }
 
 body {
-    overflow-x: hidden;
-    font-family: 'Josefin Sans';
-    font-weight: 400;
+  overflow-x: hidden;
+  font-family: "Josefin Sans";
+  font-weight: 400;
 }
 
 .d-flex-inline {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .flex-center {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 ion-icon {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
-.btn, ion-icon {
-    transition: 0.5s;
+.btn,
+ion-icon {
+  transition: 0.5s;
 }
 
 .btn:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn:hover ion-icon {
-    padding-left: 15px;
+  padding-left: 15px;
+}
+
+.courseRow {
+  background-color: lightgray;
+  margin-top: 20px;
 }
