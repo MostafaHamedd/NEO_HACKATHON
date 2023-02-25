@@ -32,6 +32,18 @@ class Course {
   }
 
   getSubject() { return this.subject }
-  getSubject() { return this.subject }
+  getCourseCode() { return this.courseCode }
+  getTitle() { return this.title }
+  getCredits() { return this.credits }
+  getSectionNum() { return this.sectionNum }
+  getCRN() { return this.subject }
+  getDays() { return this.days }
+  getTime() { return this.time }
+  getCapacity() { return this.capacity }
+  getActive() { return this.active }
+  getInstructor() { return this.instructor }
+  getDate() { return this.date }
+  getLocation() { return this.location }
+  getDepartment() { return this.department }
 }
 
