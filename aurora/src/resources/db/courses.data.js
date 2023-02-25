@@ -15,7 +15,3 @@ const COURSES = [
 ];
 
 const COURSES_INFO = {};
-
-COURSES_INFO[ NAMES_COURSES["COMP 1012"] ] = {
-  
-}
