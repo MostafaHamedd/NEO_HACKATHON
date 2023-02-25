@@ -34,13 +34,8 @@ export default function Header() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                About
+              <a className="nav-link" href={URL_ROUTES.COURSES_PAGE}>
+                Courses
               </a>
             </li>
             <li className="nav-item dropdown">
