@@ -31,10 +31,9 @@ export default function MyScheduler() {
 
   return (
     <Paper>
-      <div>Week at Glance</div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <button onClick={handlePrevClick}>Previous Week</button>
-      <button onClick={handleNextClick}>Next Week</button>
+      <button class="btn btn-primary" onClick={handlePrevClick}>Previous Week</button>
+      <button class="btn btn-primary" onClick={handleNextClick}>Next Week</button>
       </div>
 
       <Scheduler data={schedulerData}>
@@ -56,5 +55,5 @@ const addCourseToScheduler = (startDate, endDate, title) => {
   schedulerData = [
     ...schedulerData,
     { startDate: startDate, endDate: endDate, title: title },
-  ];
+  ]; 
 };
