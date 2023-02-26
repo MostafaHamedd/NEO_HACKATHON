@@ -11,25 +11,27 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
-        <Routes>
-          <Route exact path={URL_ROUTES.HOME_PAGE} element={<MainPage />} />
-          <Route
-            exact
-            path={URL_ROUTES.SCHEDULE_PAGE}
-            element={<SchedulePage />}
-          />
-          <Route
-            exact
-            path={URL_ROUTES.COURSES_PAGE}
-            element={<CourseListPage />}
-          />
-          <Route
-            exact
-            path={URL_ROUTES.REGISTRATION_PAGE}
-            element={<RegistrationPage />}
-          />
-        </Routes>
+        <Header  />
+        <div className="container">  
+            <Routes>
+              <Route exact path={URL_ROUTES.HOME_PAGE} element={<MainPage />} />
+              <Route
+                exact
+                path={URL_ROUTES.SCHEDULE_PAGE}
+                element={<SchedulePage />}
+              />
+              <Route
+                exact
+                path={URL_ROUTES.COURSES_PAGE}
+                element={<CourseListPage />}
+              />
+              <Route
+                exact
+                path={URL_ROUTES.REGISTRATION_PAGE}
+                element={<RegistrationPage />}
+              />
+            </Routes>
+        </div>
       </Router>
     </div>
   )

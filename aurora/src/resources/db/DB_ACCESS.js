@@ -1,2 +1,0 @@
-const COMPSCI = new DEPARTMENT_COURSES();
-

@@ -4,7 +4,7 @@ import { URL_ROUTES } from "../URL_ROUTES.routes"
 
 export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light mb-5">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           UM Aurora

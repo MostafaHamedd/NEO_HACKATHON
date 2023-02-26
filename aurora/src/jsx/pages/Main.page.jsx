@@ -14,13 +14,13 @@ export default function MainPage() {
             <h1>
               <span className='text-info'>Register</span> for your classes.
             </h1>
-            <button
-              type="button"
-              class="mt-5 d-flex-inline flex-center btn btn-lg btn-info rounded-pill px-5"
-            >
-              Get Started
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
+              <button
+                type="button"
+                class="mt-5 d-flex-inline flex-center btn btn-lg btn-info rounded-pill px-5"
+              >
+                Get Started
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
           </div>
         </div>
       </div>

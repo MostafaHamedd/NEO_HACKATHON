@@ -28,6 +28,10 @@ ion-icon {
   transition: 0.5s;
 }
 
+.rounded {
+  border-radius: 10px;
+}
+
 .btn:hover {
   transform: scale(1.1);
 }
