@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light mb-5">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href={URL_ROUTES.HOME_PAGE}>
           UM Aurora
         </a>
         <button
@@ -49,14 +49,6 @@ export default function Header() {
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link
-                className="d-flex-inline flex-center nav-link rounded-pill active"
-                to={URL_ROUTES.COURSES_PAGE}
-              >
-                 <ion-icon name="book-outline"></ion-icon>
-              </Link>
-            </li>
           </ul>
         </div>
       </div>

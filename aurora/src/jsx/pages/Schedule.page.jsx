@@ -1,5 +1,8 @@
 import * as React from 'react';
+
 import { startOfWeek, format } from 'date-fns';
+
+
 import Paper from '@mui/material/Paper';
 import { ViewState } from '@devexpress/dx-react-scheduler';
 import {
@@ -8,13 +11,10 @@ import {
   Appointments,
 } from '@devexpress/dx-react-scheduler-material-ui';
 import { addDays, subDays } from 'date-fns';
+import jsPDF from 'jspdf'; // Import jsPDF library
 
 const startDate = new Date(2023, 1, 20); // Start date of the week
 let schedulerData = [
-  { startDate: new Date(2023, 1, 20, 9, 45), endDate: new Date(2023, 1, 20, 11, 0), title: 'Meeting' },
-  { startDate: new Date(2023, 1, 22, 12, 0), endDate: new Date(2023, 1, 22, 13, 30), title: 'Go to a gym' },
-  { startDate: new Date(2023, 1, 23, 10, 0), endDate: new Date(2023, 1, 23, 11, 30), title: 'Doctor appointment' },
-  { startDate: new Date(2023, 1, 24, 15, 30), endDate: new Date(2023, 1, 24, 16, 0), title: 'Call mom' },
 ];
 
 export default function MyScheduler() {
@@ -29,12 +29,62 @@ export default function MyScheduler() {
     setCurrentDate(prevWeekStartDate);   
   };
 
+
+  function handlePdfDownload() {
+    const tableData = schedulerData;
+    const doc = new jsPDF();
+    doc.text('Your weekly schedule', 10, 10);
+    let rowHeight = doc.internal.getLineHeight();
+    let x = 10;
+    let y = 20;
+    for (let i = 0; i < tableData.length; i++) {
+      let rowData = tableData[i];
+      doc.text(format(rowData.startDate, 'MMM d'), x, y);
+      x += 40; // Set the cell width to 40
+      doc.text(format(rowData.startDate, 'h:mm aaa'), x, y);
+      x += 40; // Set the cell width to 40
+      doc.text(format(rowData.endDate, 'h:mm aaa'), x, y);
+      x += 40; // Set the cell width to 40
+      doc.text(`: ${rowData.title}`, x, y);
+      x += 60; // Set the cell width to 60
+      x = 10; // Reset the x position to the beginning of the row
+      y += rowHeight; // Move down to the next row
+    }
+    doc.save('schedule-information.pdf');
+  }
+  
+  
+  
+
+
   return (
     <Paper>
-      <div>Week at Glance</div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <button onClick={handlePrevClick}>Previous Week</button>
-      <button onClick={handleNextClick}>Next Week</button>
+      <div
+        className="mb-5"
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <button
+          class="d-inline-flex flex-center btn btn-info rounded-pill"
+          onClick={handlePrevClick}
+        >
+          <ion-icon name="arrow-back-outline"></ion-icon>  Previous Week
+        </button>
+        <button
+          class="d-inline-flex flex-center btn btn-info rounded-pill"
+          onClick={handlePdfDownload}
+        >
+          Download PDF <ion-icon name="cloud-download-outline"></ion-icon>
+        </button>
+        <button
+          class="d-inline-flex flex-center btn btn-info rounded-pill"
+          onClick={handleNextClick}
+        >
+          Next Week <ion-icon name="arrow-forward-outline"></ion-icon>
+        </button>
       </div>
 
       <Scheduler data={schedulerData}>
@@ -43,7 +93,7 @@ export default function MyScheduler() {
         <Appointments />
       </Scheduler>
     </Paper>
-  );
+  )
 }
 
 /*
@@ -52,9 +102,9 @@ new Date(2023, 1, 20, 9, 45) // year, month, day, hour, minutes
 
 same for the endDate
 */
-const addCourseToScheduler = (startDate, endDate, title) => {
+export const addCourseToScheduler = (startDate, endDate, title) => {
   schedulerData = [
     ...schedulerData,
     { startDate: startDate, endDate: endDate, title: title },
-  ];
+  ]; 
 };

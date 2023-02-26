@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { URL_ROUTES } from '../URL_ROUTES.routes'
 import HeaderImage from './../../resources/img/main/Header.png';
 
 export default function MainPage() {
@@ -12,15 +14,15 @@ export default function MainPage() {
         <div className="col-12 col-md-4">
           <div>
             <h1>
-              <span className='text-info'>Register</span> for your classes.
+              <span className="text-info">Register</span> for your classes.
             </h1>
-              <button
-                type="button"
-                class="mt-5 d-flex-inline flex-center btn btn-lg btn-info rounded-pill px-5"
-              >
-                Get Started
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </button>
+            <Link
+              to={URL_ROUTES.REGISTRATION_PAGE}
+              class="mt-5 d-flex-inline flex-center btn btn-lg btn-info rounded-pill px-5"
+            >
+              Get Started
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </Link>
           </div>
         </div>
       </div>

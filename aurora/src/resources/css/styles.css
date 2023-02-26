@@ -43,4 +43,17 @@ ion-icon {
 .courseRow {
   background-color: lightgray;
   margin-top: 20px;
+  text-align: center;
+}
+
+.sectionsRow {
+  margin-top: 15px;
+  background-color: lightgoldenrodyellow;
+  text-align: center;
+  padding-left: 40px;
+}
+
+.courseName {
+  color: black;
+  font-weight: bold;
 }

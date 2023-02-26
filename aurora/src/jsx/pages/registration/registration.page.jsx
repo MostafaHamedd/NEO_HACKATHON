@@ -15,7 +15,6 @@ export default function RegistrationPage() {
 
   async function searchCourses () {
     let COURSES = CURRENT_UNIVERSITY.getCourseList(term, department);
-    console.log(COURSES)
     setCourses(COURSES);
   }
 
@@ -69,18 +68,11 @@ export default function RegistrationPage() {
           </div>
         </div>
       </h1>
-
+      
       {courses != null &&
         courses.length >= 1 &&
         courses.map((course) => {
-          const { subject, courseCode, title, credits, sectionNum, CRN, days, time, capacity, active, instructor, location, department} = course;
-          return (
-            <CourseRow
-              courseFullName={title}
-              courseName={subject + ' ' + courseCode}
-              credits={credits}
-            />
-          )
+          return <CourseRow course={course} />
         })}
     </div>
   )
