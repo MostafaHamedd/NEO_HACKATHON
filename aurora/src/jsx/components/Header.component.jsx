@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import { URL_ROUTES } from "../URL_ROUTES.routes"
+import logo from "./../../logo.png";
 
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light mb-5">
       <div className="container-fluid">
         <a className="navbar-brand" href={URL_ROUTES.HOME_PAGE}>
-          UM Aurora
+          {/* UM Aurora */}
+          <img height={"70px"} src={logo} alt="logo" srcset="" />
         </a>
         <button
           className="navbar-toggler"
